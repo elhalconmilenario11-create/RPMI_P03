@@ -8,17 +8,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4550036395098656175, guid: a5ccdb1e7b16b8a42ac33306922a8181, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7053450628107091523, guid: a5ccdb1e7b16b8a42ac33306922a8181, type: 3}
       propertyPath: m_Name
-      value: Carta Variant
+      value: CartaEnemigo
       objectReference: {fileID: 0}
     - target: {fileID: 7907166417733598953, guid: a5ccdb1e7b16b8a42ac33306922a8181, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7907166417733598953, guid: a5ccdb1e7b16b8a42ac33306922a8181, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.47
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7907166417733598953, guid: a5ccdb1e7b16b8a42ac33306922a8181, type: 3}
       propertyPath: m_LocalPosition.z

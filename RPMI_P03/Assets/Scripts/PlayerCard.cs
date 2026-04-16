@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class PlayerCard : MonoBehaviour
 {
+    public AudioSource takeCardAS;
+    public AudioSource dropCardAS;
+
+    // public GameObject                            　　　　　　CONTINUAR!!!!!!!!!!!!!!!11
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,11 +35,39 @@ public class PlayerCard : MonoBehaviour
     {
         // print("clic");    -->  Comprobar que funciona al cliquear la carta del jugador
         GetComponent<SpriteRenderer>().sortingLayerName = "Carta Seleccionada";
+        GetComponent<BoxCollider2D>().enabled = false; // COMPROBAR
+
+        if (!takeCardAS.isPlaying)
+        {
+            takeCardAS.pitch = Random.Range(0.95f, 1.05f);
+            takeCardAS.Play();
+        }
     }
 
     // "Soltar" carta
     private void OnMouseUp()
     {
         GetComponent<SpriteRenderer>().sortingLayerName = "Default";
+        GetComponent<BoxCollider2D>().enabled = true; // COMPROBAR
+        if (!dropCardAS.isPlaying)
+        {
+            takeCardAS.pitch = Random.Range(0.95f, 1.05f);
+            dropCardAS.Play();
+        }
+        
     }
-}
+
+    private void OnCollisionEnter2D(Collision2D collision) // ARREGLAR
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            if (!collision.gameObject.GetComponent<EnemyCard>().inCombat)
+            {
+               GameObject cs = Instantiate(CombatSistem, transform.position, Quaternion.identity);
+                cs.GetComponent<CombatSistem>().playerCard = GetComponent<CardStats>();
+                cs.GetComponent<CombatSistem>().enemyCard = GetComponent<CardStats>();
+            }
+        }
+    }
+  
+    }

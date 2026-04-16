@@ -8,9 +8,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5374931364508759947, guid: a5ccdb1e7b16b8a42ac33306922a8181, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 731e02afd5664bb46af43bf126c32d11, type: 3}
     - target: {fileID: 7053450628107091523, guid: a5ccdb1e7b16b8a42ac33306922a8181, type: 3}
       propertyPath: m_Name
-      value: free_pixel_art_card_pack_resized_17 Variant
+      value: CartaJugador
       objectReference: {fileID: 0}
     - target: {fileID: 7907166417733598953, guid: a5ccdb1e7b16b8a42ac33306922a8181, type: 3}
       propertyPath: m_LocalPosition.x
@@ -77,3 +81,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e152bdcb0c550a34bb98f4fdd6066efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCard
+  takeCardAS: {fileID: 0}
+  dropCardAS: {fileID: 0}
